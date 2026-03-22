@@ -2,18 +2,19 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch Vite (Chrome)",
+      "name": "Vite React: Debug App",
       "type": "pwa-chrome",
       "request": "launch",
+      "preLaunchTask": "app:run",
       "url": "http://localhost:5173",
       "webRoot": "${workspaceFolder}"
     },
     {
-      "name": "Debug Vitest",
+      "name": "Vite React: Debug Tests",
       "type": "node",
       "request": "launch",
       "runtimeExecutable": "pnpm",
-      "runtimeArgs": ["test", "--", "--watch"],
+      "runtimeArgs": ["test:watch"],
       "console": "integratedTerminal",
       "cwd": "${workspaceFolder}"
     }

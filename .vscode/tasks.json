@@ -2,7 +2,7 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "dev-server",
+      "label": "app:run",
       "type": "shell",
       "command": "pnpm dev --host 0.0.0.0 --port 5173",
       "isBackground": true,
@@ -13,6 +13,26 @@
           "activeOnStart": true,
           "beginsPattern": ".",
           "endsPattern": "ready in"
+        }
+      }
+    },
+    {
+      "label": "test:run",
+      "type": "shell",
+      "command": "pnpm test"
+    },
+    {
+      "label": "test:watch",
+      "type": "shell",
+      "command": "pnpm test:watch",
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "custom",
+        "pattern": [{ "regexp": "." }],
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": ".",
+          "endsPattern": "Watching for file changes|PASS|FAIL"
         }
       }
     }
