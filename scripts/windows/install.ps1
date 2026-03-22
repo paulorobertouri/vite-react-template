@@ -5,5 +5,5 @@ $ProjectRoot = Split-Path -Parent (Split-Path -Parent $ScriptDir)
 
 Set-Location $ProjectRoot
 
-Write-Output "Building application..."
-pnpm build
+Write-Output "Installing dependencies..."
+pnpm install
